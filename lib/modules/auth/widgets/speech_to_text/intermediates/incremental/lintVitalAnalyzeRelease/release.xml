@@ -1,0 +1,31 @@
+<variant
+    name="release"
+    package="com.csdcorp.speech_to_text"
+    minSdkVersion="21"
+    targetSdkVersion="21"
+    mergedManifest="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/merged_manifest/release/AndroidManifest.xml"
+    proguardFiles="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/default_proguard_files/global/proguard-android.txt-8.2.2"
+    partialResultsDir="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/lint_vital_partial_results/release/out"
+    desugaredMethodsFiles="/Users/jigarmangukiya/.gradle/caches/transforms-3/77c97e1888a182b974668136c929868f/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/main/kotlin:src/release/java:src/release/kotlin"
+        resDirectories="src/main/res:src/release/res"
+        assetsDirectories="src/main/assets:src/release/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/javac/release/classes:/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/tmp/kotlin-classes/release:/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/compile_r_class_jar/release/R.jar"
+      type="MAIN"
+      applicationId="com.csdcorp.speech_to_text"
+      generatedSourceFolders="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/generated/ap_generated_sources/release/out"
+      generatedResourceFolders="/Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/generated/res/resValues/release"
+      desugaredMethodsFiles="/Users/jigarmangukiya/.gradle/caches/transforms-3/77c97e1888a182b974668136c929868f/transformed/D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

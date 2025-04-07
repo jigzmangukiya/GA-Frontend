@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "723488232923",
+    "project_id": "guardian-angel-de0cc",
+    "storage_bucket": "guardian-angel-de0cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723488232923:android:96a96fd7a5eee0485843fe",
+        "android_client_info": {
+          "package_name": "com.example.guardian_angel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcg_ysPrzNy0y11YENFj59xGkC7gp4pJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

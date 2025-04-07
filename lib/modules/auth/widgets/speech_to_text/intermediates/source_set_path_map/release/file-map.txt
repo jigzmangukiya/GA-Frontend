@@ -1,0 +1,11 @@
+com.csdcorp.speech_to_text-core-1.6.0-0 /Users/jigarmangukiya/.gradle/caches/transforms-3/27aa9bffcfcb6576053cd6833b39fea6/transformed/core-1.6.0/res
+com.csdcorp.speech_to_text-jetified-window-1.0.0-beta04-1 /Users/jigarmangukiya/.gradle/caches/transforms-3/7158a0eb3976459c8dc71bdc17b083ba/transformed/jetified-window-1.0.0-beta04/res
+com.csdcorp.speech_to_text-jetified-annotation-experimental-1.1.0-2 /Users/jigarmangukiya/.gradle/caches/transforms-3/b3cd8de401fe2944bcc455e5c01a2256/transformed/jetified-annotation-experimental-1.1.0/res
+com.csdcorp.speech_to_text-jetified-window-java-1.0.0-beta04-3 /Users/jigarmangukiya/.gradle/caches/transforms-3/d91c9fac9df87b9f62ecfd4d42810415/transformed/jetified-window-java-1.0.0-beta04/res
+com.csdcorp.speech_to_text-main-4 /Users/jigarmangukiya/.pub-cache/hosted/pub.dev/speech_to_text-6.6.0/android/src/main/res
+com.csdcorp.speech_to_text-release-5 /Users/jigarmangukiya/.pub-cache/hosted/pub.dev/speech_to_text-6.6.0/android/src/release/res
+com.csdcorp.speech_to_text-pngs-6 /Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/generated/res/pngs/release
+com.csdcorp.speech_to_text-resValues-7 /Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/generated/res/resValues/release
+com.csdcorp.speech_to_text-mergeReleaseResources-8 /Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.csdcorp.speech_to_text-mergeReleaseResources-9 /Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.csdcorp.speech_to_text-merged_res-10 /Users/jigarmangukiya/Workspace/Product Labs/gaurdian/GuardianAngelApp/build/speech_to_text/intermediates/merged_res/release
