@@ -78,123 +78,93 @@ class _LoginScreenState extends State<LoginScreen> {
           child: RoundedTextButton(
             text: _currentPage == 1 ? "Verify" : 'Send OTP',
             height: 56,
-            color: _currentPage == 0 ? (isButtonEnabled ? ColorConstant.primaryColor : Colors.grey) : (isOTPEnabled ? ColorConstant.primaryColor : Colors.grey),
+            color: _currentPage == 0
+                ? (isButtonEnabled ? ColorConstant.primaryColor : Colors.grey)
+                : (isOTPEnabled ? ColorConstant.primaryColor : Colors.grey),
             onPressed: isButtonEnabled
                 ? () async {
                     if (_currentPage == 0) {
                       if (mobileNumber.length == 10) {
-                        try {
-                          LoadingIndicator.show(context);
-                          FirebaseAuth auth = FirebaseAuth.instance;
-                          await auth.verifyPhoneNumber(
-                            phoneNumber: "+91${mobileNumber.toString()}",
-                            timeout: const Duration(seconds: 60),
-                            verificationCompleted: (PhoneAuthCredential credential) async {
-                              await auth.signInWithCredential(credential);
-                              LoadingIndicator.dismiss();
-                            },
-                            verificationFailed: (FirebaseAuthException e) {
-                              LoadingIndicator.dismiss();
-                              // showAlertDialog(
-                              //   context,
-                              //   title: 'ERROR',
-                              //   message: e.toString(),
-                              // );
-                              if (e.code == 'invalid-phone-number') {
-                                print('The provided phone number is not valid.');
-                              }
-                            },
-                            codeSent: (String verificationid, int? resendToken) {
-                              LoadingIndicator.dismiss();
-                              verificationId = verificationid;
-                              _currentPage += 1;
-                              setState(() {});
-                            },
-                            codeAutoRetrievalTimeout: (String verificationId) {},
-                          );
-                        } catch (e) {
-                          LoadingIndicator.dismiss();
-                          showAlertDialog(
-                            context,
-                            title: 'ERROR',
-                            message: e.toString(),
-                          );
-                        }
+                        // try {
+                        //   LoadingIndicator.show(context);
+                        //   FirebaseAuth auth = FirebaseAuth.instance;
+                        //   await auth.verifyPhoneNumber(
+                        //     phoneNumber: "+91${mobileNumber.toString()}",
+                        //     timeout: const Duration(seconds: 60),
+                        //     verificationCompleted: (PhoneAuthCredential credential) async {
+                        //       await auth.signInWithCredential(credential);
+                        //       LoadingIndicator.dismiss();
+                        //     },
+                        //     verificationFailed: (FirebaseAuthException e) {
+                        //       LoadingIndicator.dismiss();
+                        //       // showAlertDialog(
+                        //       //   context,
+                        //       //   title: 'ERROR',
+                        //       //   message: e.toString(),
+                        //       // );
+
+                        //       if (e.code == 'invalid-phone-number') {
+                        //         print('The provided phone number is not valid.');
+                        //       }
+                        //     },
+                        //     codeSent: (String verificationid, int? resendToken) {
+                        //       LoadingIndicator.dismiss();
+                        //       verificationId = verificationid;
+                        //       _currentPage += 1;
+                        //       setState(() {});
+                        //     },
+                        //     codeAutoRetrievalTimeout: (String verificationId) {},
+                        //   );
+                        // } catch (e) {
+                        //   LoadingIndicator.dismiss();
+                        //   showAlertDialog(
+                        //     context,
+                        //     title: 'ERROR',
+                        //     message: e.toString(),
+                        //   );
+                        // }
+                        _currentPage += 1;
+                        setState(() {});
                       }
                     } else if (_currentPage == 1) {
-                      if (otpNumber.length == 6) {
-                        try {
-                          PhoneAuthCredential credential = PhoneAuthProvider.credential(
-                            verificationId: verificationId,
-                            smsCode: otpNumber,
-                          );
-                          await FirebaseAuth.instance.signInWithCredential(credential);
+                      await _loginApiCall("3lkAzYcVMsRRPLvLYIOaXOOSi3Y2");
 
-                          FirebaseAuth _auth = FirebaseAuth.instance;
+                      // if (otpNumber.length == 6) {
+                      // try {
+                      //   PhoneAuthCredential credential = PhoneAuthProvider.credential(
+                      //     verificationId: verificationId,
+                      //     smsCode: otpNumber,
+                      //   );
+                      //   await FirebaseAuth.instance.signInWithCredential(credential);
 
-                          User? user = _auth.currentUser;
+                      //   FirebaseAuth _auth = FirebaseAuth.instance;
 
-                          if (user != null) {
-                            String userId = user.uid;
-                            await _loginApiCall(userId);
-                          } else {
-                            AwesomeDialog(
-                              context: context,
-                              width: MediaQuery.of(context).size.width,
-                              dialogType: DialogType.error,
-                              animType: AnimType.topSlide,
-                              dismissOnTouchOutside: false,
-                              headerAnimationLoop: false,
-                              title: 'ERROR',
-                              desc: "Something went wrong!",
-                              btnOkOnPress: () {},
-                            )..show();
-                          }
-                        } catch (e) {
-                          showAlertDialog(
-                            context,
-                            title: 'ERROR',
-                            message: e.toString(),
-                          );
-                        }
+                      //   User? user = _auth.currentUser;
 
-                        // if (otpNumber.length == 6) {
-                        //   try {
-                        //     PhoneAuthCredential credential = PhoneAuthProvider.credential(
-                        //       verificationId: verificationId,
-                        //       smsCode: otpNumber,
-                        //     );
-                        //     await FirebaseAuth.instance.signInWithCredential(credential);
-
-                        //     FirebaseAuth _auth = FirebaseAuth.instance;
-
-                        //     User? user = _auth.currentUser;
-
-                        //     // String? userId = user?.uid;
-                        //     if (user != null) {
-                        //       String userId = user.uid;
-                        //       await _loginApiCall(userId);
-                        //     } else {
-                        //       AwesomeDialog(
-                        //         context: context,
-                        //         width: MediaQuery.of(context).size.width,
-                        //         dialogType: DialogType.error,
-                        //         animType: AnimType.topSlide,
-                        //         dismissOnTouchOutside: false,
-                        //         headerAnimationLoop: false,
-                        //         title: 'ERROR',
-                        //         desc: "Something went wrong!",
-                        //         btnOkOnPress: () {},
-                        //       )..show();
-                        //     }
-                        //   } catch (e) {
-                        //     showAlertDialog(
-                        //       context,
-                        //       title: 'ERROR',
-                        //       message: e.toString(),
-                        //     );
-                        //   }
-                      }
+                      //   if (user != null) {
+                      //     String userId = user.uid;
+                      //     await _loginApiCall(userId);
+                      //   } else {
+                      //     AwesomeDialog(
+                      //       context: context,
+                      //       width: MediaQuery.of(context).size.width,
+                      //       dialogType: DialogType.error,
+                      //       animType: AnimType.topSlide,
+                      //       dismissOnTouchOutside: false,
+                      //       headerAnimationLoop: false,
+                      //       title: 'ERROR',
+                      //       desc: "Something went wrong!",
+                      //       btnOkOnPress: () {},
+                      //     )..show();
+                      //   }
+                      // } catch (e) {
+                      //   showAlertDialog(
+                      //     context,
+                      //     title: 'ERROR',
+                      //     message: e.toString(),
+                      //   );
+                      // }
+                      // }
                     } else {}
                   }
                 : null,

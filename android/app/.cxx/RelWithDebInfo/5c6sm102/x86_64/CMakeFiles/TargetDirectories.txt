@@ -1,0 +1,2 @@
+/Users/jigarmangukiya/Workspace/Product Labs/GA-Frontend/android/app/.cxx/RelWithDebInfo/5c6sm102/x86_64/CMakeFiles/edit_cache.dir
+/Users/jigarmangukiya/Workspace/Product Labs/GA-Frontend/android/app/.cxx/RelWithDebInfo/5c6sm102/x86_64/CMakeFiles/rebuild_cache.dir

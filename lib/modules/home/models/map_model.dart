@@ -13,7 +13,7 @@ class MarkerResponseData {
   int? upvoteCount;
   int? downvoteCount;
   String? image;
-  String? alert;
+  // String? alert;
   double? distance;
   String? disasterType;
   String? name;
@@ -36,7 +36,7 @@ class MarkerResponseData {
     this.upvoteCount,
     this.downvoteCount,
     this.image,
-    this.alert,
+    // this.alert,
     this.distance,
     this.disasterType,
     this.name,
@@ -61,7 +61,7 @@ class MarkerResponseData {
     upvoteCount = json['upvoteCount'] ?? 0;
     downvoteCount = json['downvoteCount'] ?? 0;
     image = json['image'] ?? "";
-    alert = json['alert'] ?? "";
+    // alert = json['alert'] ?? "";
     distance = json['distance'] ?? 0.0;
     disasterType = json['disasterType'] ?? "";
     name = json['name'] ?? "";
@@ -87,7 +87,7 @@ class MarkerResponseData {
     data['upvoteCount'] = this.upvoteCount ?? 0;
     data['downvoteCount'] = this.downvoteCount ?? 0;
     data['image'] = this.image ?? "";
-    data['alert'] = this.alert;
+    // data['alert'] = this.alert;
     data['distance'] = this.distance ?? 0.0;
     data['disasterType'] = this.disasterType ?? "";
     data['name'] = this.name ?? "";
